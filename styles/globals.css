@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'foundersGrotesk';
+  src: url('/fonts/foundersGrotesk-400.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'foundersGrotesk';
+  src: url('/fonts/foundersGrotesk-500.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'foundersGrotesk';
+  src: url('/fonts/foundersGrotesk-600.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes rotateOuter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterRotateOuter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.outer-ring-orbit {
+  animation: rotateOuter 30s linear infinite;
+  transform-origin: center center;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'foundersGrotesk', sans-serif;
+}
+
+body {
+  transition: opacity ease-in 0.2s;
+  overflow-x: hidden;
+  background-color: #0357EE;
+  color: #061333;
+}
